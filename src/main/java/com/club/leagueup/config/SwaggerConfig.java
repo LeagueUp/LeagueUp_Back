@@ -31,7 +31,7 @@ public class SwaggerConfig {
                 "LeagueUp API 명세서",
                 "LeagueUp API 명세서",
                 "Version",
-                "localhost:8080",
+                "termsOfServiceUrl",
                 "contact Name",
                 "License",
                 "License URL"

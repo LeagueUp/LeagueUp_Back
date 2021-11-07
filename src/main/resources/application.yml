@@ -12,6 +12,9 @@ spring:
       hibernate:
         format_sql: true
 
+  jwt:
+    secret: ${SECRET:B4566A19F860E13740396DD4B992770A1A48C462CAE5238E852D59ADA83D28CA}
+
 logging.level:
   org.hibernate.SQL: debug
   org.hibernate.type: trace

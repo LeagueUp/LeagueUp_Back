@@ -8,6 +8,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
+
 @RequiredArgsConstructor
 @Transactional
 @Service
@@ -26,6 +28,7 @@ public class MemberService {
                 .password(password)
                 .club(requestDto.getMemberClub())
                 .sports(requestDto.getSports())
+                .roles(Collections.singletonList("ROLE_USER")) // 최초 가입시 USER 로 설정
                 .build();
 
         return memberRepository.save(member).getMemberId();
